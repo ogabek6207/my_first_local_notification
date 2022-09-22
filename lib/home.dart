@@ -11,32 +11,48 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   @override
-
-
-
   void initState() {
-
-tz.initializeTimeZones();
+    tz.initializeTimeZones();
     super.initState();
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-
-            NotificationService().showNotification(1, 'jack', 'salom', 5);
-          },
-          child: Container(
-            height: 40,
-            width: 200,
-            color: Colors.green,
-            child: Center(child: Text("Show Notification")),
-
+      body: Column(
+        children: [
+          Expanded(
+            child: Center(
+              child: GestureDetector(
+                onTap: () {
+                  notificationService.showNotificationTime(
+                      1, 'jack', 'salom', 5);
+                },
+                child: Container(
+                  height: 40,
+                  width: 200,
+                  color: Colors.green,
+                  child: Center(child: Text("Show Notification time")),
+                ),
+              ),
+            ),
           ),
-        ),
+          Expanded(
+            child: Center(
+              child: GestureDetector(
+                onTap: () {
+                  notificationService.showNotification(11231, 'jack', 'salom');
+                },
+                child: Container(
+                  height: 40,
+                  width: 200,
+                  color: Colors.green,
+                  child: Center(child: Text("Show Notification")),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

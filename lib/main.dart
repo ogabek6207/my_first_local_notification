@@ -9,7 +9,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  NotificationService().initNotification();
+  notificationService.initNotification();
   runApp(const MyApp());
 }
 
