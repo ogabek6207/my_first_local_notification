@@ -27,7 +27,7 @@ tz.initializeTimeZones();
         child: GestureDetector(
           onTap: () {
 
-            NotificationService().showNotification(1, 'title', 'body', 5);
+            NotificationService().showNotification(1, 'jack', 'salom', 5);
           },
           child: Container(
             height: 40,
